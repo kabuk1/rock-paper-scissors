@@ -2,12 +2,15 @@ const userScoreSpan = document.getElementById("user-score");
 const computerScoreSpan = document.getElementById("computer-score");
 const scorboard = document.querySelector(".scoreboard");
 const result = document.querySelector(".result > h3");
+const resetBtn = document.getElementById("reset");
 const rockBtn = document.getElementById("rock");
 const paperBtn = document.getElementById("paper");
 const scissorsBtn = document.getElementById("scissors");
 
 let userScore = 0;
 let computerScore = 0;
+
+//Choose 
 
 
 //Random computer weapon choice
@@ -36,6 +39,7 @@ const lose = (userChoice, computerChoice) => {
 const draw = (userChoice, computerChoice) => {
     result.innerHTML = `${computerChoice} equals ${userChoice}. It's a draw!`;
 }
+
 
 //Define win, lose, draw
 const game = (userChoice) => {
@@ -74,3 +78,22 @@ scissorsBtn.addEventListener("click", function() {
 });
 }
 mainGame();
+
+//Reset
+resetBtn.addEventListener("click", function(){
+	reset();
+});
+
+reset = () => {
+	//reset scores
+	userScore = 0;
+	computerScore = 0;
+	//resets display
+	userScoreSpan.textContent = 0;
+	computerScoreSpan.textContent = 0;
+	//resets winner
+	userScoreSpan.classList.remove("winner");
+	computerScoreSpan.classList.remove("winner");
+	//reset gameover
+	gameOver = false;
+}
