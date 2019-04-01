@@ -35,6 +35,7 @@
     color: var(--white);
     width: 100vw;
     height: 100vh;
+    font-family: 'Vollkorn', Georgia, Times, serif;
   }
   
   input,
@@ -145,6 +146,10 @@
   }
   
   /* Styling of grid items */
+  .header {
+    font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+  }
+
   .scoreboard {
     width: 100px;
     grid-row-gap: 10px;
@@ -210,11 +215,11 @@
   
   /* Font sizes */
   h1 {
-    font-size: 2em;
+    font-size: 1.5em;
   }
   
   p {
-    font-size: 1.5em;
+    font-size: 1.7em;
   }
   
   button {
