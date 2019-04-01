@@ -10,8 +10,6 @@ const scissorsBtn = document.getElementById("scissors");
 let userScore = 0;
 let computerScore = 0;
 
-//Choose 
-
 
 //Random computer weapon choice
 getComputerChoice = () => {
@@ -39,6 +37,7 @@ const lose = (userChoice, computerChoice) => {
 const draw = (userChoice, computerChoice) => {
     result.innerHTML = `${computerChoice} equals ${userChoice}. It's a draw!`;
 }
+
 
 
 //Define win, lose, draw
@@ -79,7 +78,7 @@ scissorsBtn.addEventListener("click", function() {
 }
 mainGame();
 
-//Reset
+//Reset game
 resetBtn.addEventListener("click", function(){
 	reset();
 });
@@ -91,9 +90,4 @@ reset = () => {
 	//resets display
 	userScoreSpan.textContent = 0;
 	computerScoreSpan.textContent = 0;
-	//resets winner
-	userScoreSpan.classList.remove("winner");
-	computerScoreSpan.classList.remove("winner");
-	//reset gameover
-	gameOver = false;
 }
