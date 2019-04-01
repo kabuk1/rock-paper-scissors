@@ -4,7 +4,7 @@ Description
 -----------
 An interactive single player recreation of the classic rock, paper, scissors game using vanilla JS, CSS and HTML.
 
-I used JavaScript click event listenters, DOM manipulation and CSS Grid.
+I used JavaScript click event listeners, DOM manipulation and CSS Grid.
 
 How to Play
 ----------
